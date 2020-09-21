@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
           if (str.length > 0) {
             this.typeout(str.substring(1))
           }
-        }, 90)
+        }, 70)
       },
     }
   })
