@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Leon Kühne</title>
+  <meta name="description" content="Welcome to my personal hub">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+  <script lang="vue" src="js/script.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="app">
+    <header>{{ title }}</header>
+    <nav>
+      <div v-if="showLinks" class="nav-links">
+        <div class="link">
+          <a href="http://github.com/lxk1170">
+            <img src="media/github.png" alt="GitHub" title="GitHub" width="64px" height="64px" />
+          </a>
+        </div>
+        <div class="link">
+          <a href="https://www.linkedin.com/in/leon-kühne-6874121b7">
+            <img src="media/linkedin.png" alt="LinkedIn" title="LinkedIn" width="64px" height="64px" />
+          </a>
+        </div>
+        <div class="link">
+          <a href="https://rit-csm.symplicity.com/profiles/leon.kuhne">
+            <img src="media/rit.png" alt="RIT" title="RIT" height="90px" />
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</body>
+</html>

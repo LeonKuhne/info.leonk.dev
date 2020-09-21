@@ -1,0 +1,89 @@
+:root {
+
+}
+
+html {
+  color: black;
+  background-color: #fffaf5;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  display: flex;
+}
+
+html, body, #app {
+  margin: auto;
+}
+
+#app {
+  flex-direction: column;
+  min-width: 520px;
+}
+
+nav {
+  min-height: 150px;
+}
+
+@keyframes showNav {
+  from { filter: opacity(0%); }
+  to { filter: opacity(100%); }
+}
+
+.nav-links {
+  filter: opacity(0%);
+  animation: showNav;
+  animation-duration: 3s;
+  filter: opacity(100%);
+
+  display: flex;
+  margin: auto;
+  padding: 1vw;
+}
+
+.nav-links .link {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: auto;
+  text-align: center;
+}
+
+.link a {
+  max-width: min-content;
+  margin: auto;
+  padding: 10px;
+  padding-bottom: 7px;
+}
+
+.link a img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
+.link a:hover {
+  background-image: radial-gradient(#eee, #eee, #0000, #0000);
+}
+
+.link a:active {
+  animation: clicked;
+  animation-duration: 0.1s;
+  filter: invert(100%);
+}
+
+@keyframes clicked {
+  from { filter: none; }
+  to { filter: invert(100%); }
+}
+
+header {
+  padding: 1vw;
+  font-size: 3em;
+  max-width: max-content;
+  margin: auto;
+}
