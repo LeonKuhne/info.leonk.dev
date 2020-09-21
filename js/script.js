@@ -14,18 +14,17 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
       if (lastVisited && ((new Date) - Date.parse(lastVisited) < one_hour)) {
         localStorage.setItem("leon-recent", (new Date))
-        this.title = "Hi. I'm Leon Kühne"
+        this.title = ". I'm Leon Kühne"
         this.showLinks = true
       } else {
         // remember the user
         localStorage.setItem("leon-recent", (new Date))
 
         // type out my name
-        this.title = "Hi"
         setTimeout(() => this.typeout(". "), 1200)
         setTimeout(() => {
           this.typeout("I'm Leon Kühne")
-          this.showLinks = true
+          setTimeout(() => this.showLinks = true, 1200)
         }, 2100)
       }
     },

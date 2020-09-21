@@ -35,7 +35,7 @@ nav {
 .nav-links {
   filter: opacity(0%);
   animation: showNav;
-  animation-duration: 3s;
+  animation-duration: 1s;
   filter: opacity(100%);
 
   display: flex;
