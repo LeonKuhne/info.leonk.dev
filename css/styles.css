@@ -20,24 +20,59 @@ html, body, #app {
 
 #app {
   flex-direction: column;
-  min-width: 520px;
+  width: 90vw;
+  font-size: 2.5vw;
+}
+
+@media screen and (max-width: 700px) {
+  .link a img {
+    max-width: 20vw;
+    max-height: 20vw;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  #app {
+    font-size: 18px;
+  }
+}
+
+#headshot {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 80vw;
+  height: 80vw;
+  max-width: 320px;
+  max-height: 320px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+#headshot img {
+  background: black;
+  display: block;
+  position: relative;
+  left: 27%;
+  margin: auto;
+  height: 100%;
+  float: right;
 }
 
 nav {
   min-height: 150px;
+  width: 100%;
+  max-width: 520px;
+  margin: auto;
 }
 
-@keyframes showNav {
-  from { filter: opacity(0%); }
-  to { filter: opacity(100%); }
-}
-
-.nav-links {
+.fadein {
   filter: opacity(0%);
   animation: showNav;
   animation-duration: 1s;
   filter: opacity(100%);
+}
 
+.nav-links {
   display: flex;
   margin: auto;
   padding: 1vw;
@@ -67,7 +102,7 @@ nav {
 }
 
 .link a:hover {
-  background-image: radial-gradient(#eee, #eee, #0000, #0000);
+  background-image: radial-gradient(#ccc, #ccc, #0000, #0000);
 }
 
 .link a:active {
@@ -76,14 +111,21 @@ nav {
   filter: invert(100%);
 }
 
-@keyframes clicked {
-  from { filter: none; }
-  to { filter: invert(100%); }
-}
-
 header {
   padding: 1vw;
   font-size: 3em;
   max-width: max-content;
   margin: auto;
 }
+
+@keyframes showNav {
+  from { filter: opacity(0%); }
+  to { filter: opacity(100%); }
+}
+
+@keyframes clicked {
+  from { filter: none; }
+  to { filter: invert(100%); }
+}
+
+

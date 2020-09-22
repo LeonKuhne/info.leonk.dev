@@ -3,7 +3,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Leon Kühne</title>
-  <meta name="description" content="Welcome to my personal hub">
+  <meta name="description" content="Welcome to my personal hub!">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
   <script lang="vue" src="js/script.js"></script>
@@ -11,9 +11,12 @@
 </head>
 <body>
   <div id="app">
+    <div id="headshot" v-bind:class="{ fadein: showHeadFade }">
+      <img v-if="showHeadshot" src="media/leonkuhne.png" alt="Portrait" />
+    </div>
     <header><em>Hi</em>{{ title }}</header>
     <nav>
-      <div v-if="showLinks" class="nav-links">
+      <div v-if="showLinks" class="nav-links" v-bind:class="{ fadein: showFade }">
         <div class="link">
           <a href="http://github.com/lxk1170">
             <img src="media/github.png" alt="GitHub" title="GitHub" width="64px" height="64px" />

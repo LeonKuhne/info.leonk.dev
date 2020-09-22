@@ -5,7 +5,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
     el: '#app',
     data: {
       title: "",
-      showLinks: false
+      showLinks: false,
+      showFade: false,
+      showHeadshot: false,
+      showHeadFade: false
     },
     created() {
       // get last visited timestamp
@@ -16,6 +19,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         localStorage.setItem("leon-recent", (new Date))
         this.title = ". I'm Leon Kühne"
         this.showLinks = true
+        this.showHeadshot = true
       } else {
         // remember the user
         localStorage.setItem("leon-recent", (new Date))
@@ -24,7 +28,14 @@ document.addEventListener('DOMContentLoaded', ()=>{
         setTimeout(() => this.typeout(". "), 1200)
         setTimeout(() => {
           this.typeout("I'm Leon Kühne")
-          setTimeout(() => this.showLinks = true, 1200)
+          setTimeout(() => {
+            this.showHeadshot = true
+            this.showHeadFade = true
+          }, 800)
+          setTimeout(() => {
+            this.showLinks = true
+            this.showFade = true
+          }, 1200)
         }, 2100)
       }
     },
