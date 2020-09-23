@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
       one_hour = 60 * 60 * 1000
       lastVisited = localStorage.getItem("leon-recent")
 
-      if (lastVisited && ((new Date) - Date.parse(lastVisited) < one_hour)) {
+      if (lastVisited && ((new Date) - Date.parse(lastVisited) < (one_hour * 2))) {
         localStorage.setItem("leon-recent", (new Date))
         this.title = ". I'm Leon Kühne"
         this.showLinks = true
