@@ -89,6 +89,16 @@ nav {
   text-align: center;
 }
 
+.nav-links a {
+  text-align: center;
+  color: #333e14;
+}
+
+.nav-links a:hover {
+  text-align: center;
+  color: #F76902;
+}
+
 .link a {
   max-width: min-content;
   margin: auto;
