@@ -15,7 +15,6 @@
       <img v-if="showHeadshot" src="media/leonkuhne.png" alt="Portrait" />
     </div>
     <header><em>Hi</em>{{ title }}</header>
-    <h3 v-if="showLinks" class="nav-links" v-bind:class="{ fadein: showFade }"><a href="media/resume.pdf">Resume</a></h3>
     <nav>
       <div v-if="showLinks" class="nav-links" v-bind:class="{ fadein: showFade }">
         <div class="link">
@@ -40,6 +39,7 @@
         </div>
       </div>
     </nav>
+    <h3 v-if="showLinks" class="nav-links" v-bind:class="{ fadein: showFade }"><a href="media/resume.pdf">Resume</a></h3>
   </div>
 </body>
 </html>
