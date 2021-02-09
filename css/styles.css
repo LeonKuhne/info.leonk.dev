@@ -89,12 +89,15 @@ nav {
   text-align: center;
 }
 
-.nav-links a {
+h3.nav-links a {
   text-align: center;
-  color: #333e14;
+  color: #666;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: auto;
 }
 
-.nav-links a:hover {
+h3.nav-links a:hover {
   text-align: center;
   color: #F76902;
 }
