@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         localStorage.setItem("leon-recent", (new Date))
 
         // type out my name
-        setTimeout(() => this.typeout(". "), 1200)
+        setTimeout(() => this.typeout(". "), 900)
         setTimeout(() => {
           this.typeout("I'm Leon Kühne")
           setTimeout(() => {
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             this.showLinks = true
             this.showFade = true
           }, 1200)
-        }, 2100)
+        }, 1900)
       }
     },
     methods: {
