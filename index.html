@@ -3,43 +3,57 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Leon Kühne</title>
-  <meta name="description" content="Welcome to my personal hub!">
+  <meta name="description" 
+  content="Software Engineer > Fullstack | DevOps | Backend | Web/Mobile | R&amp;D | Contracting and for hire!">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
   <script lang="vue" src="js/script.js"></script>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/nav.css">
 </head>
 <body>
   <div id="app">
+
+    <!-- navigation -->
+    <nav>
+      <a class="nav-item green">dev</a> /
+      <a class="nav-item red">music</a> /
+      <a class="nav-item blue">projects</a>
+      <hr />
+    </nav>
+
+    <!-- headshot -->
     <div id="headshot" v-bind:class="{ fadein: showHeadFade }">
       <img v-if="showHeadshot" src="media/leonkuhne.png" alt="Portrait" />
     </div>
     <header><em>Hi</em>{{ title }}</header>
-    <nav>
-      <div v-if="showLinks" class="nav-links" v-bind:class="{ fadein: showFade }">
-        <div class="link">
-          <a href="http://github.com/lxk1170">
-            <img src="media/github.png" alt="GitHub" title="GitHub" height="64px" />
-          </a>
-        </div>
-        <div class="link">
-          <a href="https://www.linkedin.com/in/leonkuhne">
-            <img src="media/linkedin.png" alt="LinkedIn" title="LinkedIn" height="64px" />
-          </a>
-        </div>
-        <div class="link">
-          <a href="https://rit-csm.symplicity.com/profiles/leon.kuhne">
-            <img src="media/rit.png" alt="RIT" title="RIT" height="85px" />
-          </a>
-        </div>
-        <div class="link">
-          <a href="https://meritpages.com/leonkuhne">
-            <img src="media/merit.png" alt="RIT Merit" title="Merit Pages" height="70px" />
-          </a>
-        </div>
+
+    <!-- links -->
+    <div v-if="showLinks" class="links" v-bind:class="{ fadein: showFade }">
+      <div class="link">
+        <a href="http://github.com/leonkuhne">
+          <img src="media/github.png" alt="GitHub" title="GitHub" height="64" />
+        </a>
       </div>
-    </nav>
-    <h3 v-if="showLinks" class="nav-links" v-bind:class="{ fadein: showFade }"><a href="media/resume.pdf">Resume</a></h3>
+      <div class="link">
+        <a href="https://www.linkedin.com/in/leonkuhne">
+          <img src="media/linkedin.png" alt="LinkedIn" title="LinkedIn" height="64" />
+        </a>
+      </div>
+      <div class="link">
+        <a href="https://rit-csm.symplicity.com/profiles/leon.kuhne">
+          <img src="media/rit.png" alt="RIT" title="RIT" height="85" />
+        </a>
+      </div>
+      <div class="link">
+        <a href="https://meritpages.com/leonkuhne">
+          <img src="media/merit.png" alt="RIT Merit" title="Merit Pages" height="70" />
+        </a>
+      </div>
+    </div>
+    <h3 v-if="showLinks" id="resume" class="links" v-bind:class="{ fadein: showFade }">
+      <a href="media/resume.pdf">Resume</a>
+    </h3>
   </div>
 </body>
 </html>

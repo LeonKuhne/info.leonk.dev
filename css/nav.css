@@ -1,0 +1,25 @@
+nav {
+  text-align: center;
+  margin: auto;
+  cursor: default;
+  font-size: 2vw;
+  letter-spacing: 1rem;
+  padding-top: 2vh;
+  padding-bottom: 10vh;
+  font-weight: 100;
+} a.nav-item:hover {
+  cursor: pointer;
+  font-weight: 900;
+} a.nav-item.green:hover {
+  color: green;
+} a.nav-item.red:hover {
+  color: red;
+} a.nav-item.blue:hover {
+  color: blue;
+} nav > hr {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-width: 1px;
+  color: black;
+}
