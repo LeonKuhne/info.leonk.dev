@@ -7,6 +7,9 @@ nav {
   padding-top: 2vh;
   padding-bottom: 10vh;
   font-weight: 100;
+  min-width: 100%;
+  position: absolute;
+  top: 0;
 } a.nav-item:hover {
   cursor: pointer;
   font-weight: 900;

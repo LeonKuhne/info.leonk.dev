@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', ()=>{
-  
-
   new Vue({
     el: '#app',
     data: {
@@ -25,7 +23,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         localStorage.setItem("leon-recent", (new Date))
 
         // type out my name
-        setTimeout(() => this.typeout(". "), 900)
+        setTimeout(() => this.typeout(". "), 100)
         setTimeout(() => {
           this.typeout("I'm Leon Kühne")
           setTimeout(() => {
@@ -36,7 +34,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             this.showLinks = true
             this.showFade = true
           }, 1200)
-        }, 1900)
+        }, 500)
       }
     },
     methods: {
