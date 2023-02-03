@@ -1,0 +1,48 @@
+#!/bin/bash
+
+title "leonk.dev"
+help $0 | indent "$C_DEBUG$B_BULLET "
+
+function run () {
+  npm i
+  npm run dev
+}
+
+function test () {
+  build
+  npm run preview
+}
+
+function build () {
+  npm i
+  rm -rf dist
+  npm run build
+  echo "\n$(pwd)/dist"
+  ls dist
+}
+
+function deploy () {
+  err 
+  return
+  build
+  if [ -d dist ]; then
+    cd dist
+    rm .DS_Store
+    echo "leonk.dev" >> CNAME
+    git init
+    git remote add deploy git@github.com:leonkuhne/dankpizz.art.git
+    git checkout -b deploy
+    git add .
+    git commit -m "deploying"
+    #git push deploy deploy -fu
+    cd ..
+
+    echo "Publishing site to: https://leonk.dev"
+    echo "Runners: https://github.com/leonkuhne/leonk.dev/actions"
+  fi
+}
+
+function wipe () {
+  rm -rf node_modules
+}
+
