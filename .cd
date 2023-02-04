@@ -1,0 +1,8 @@
+#!/bin/bash
+
+title "info.leonk.dev"
+help .cd | indent
+
+function update-resume() {
+  gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=media/LeonK-Resume.pdf ~/Desktop/LeonK-Resume.pdf ~/Desktop/LeonK-Projects.pdf
+}
