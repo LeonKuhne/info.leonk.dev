@@ -14,14 +14,6 @@
 <body>
   <div id="app">
 
-    <!-- navigation -->
-    <nav>
-      <a class="nav-item green">dev</a> /
-      <a class="nav-item red">music</a> /
-      <a class="nav-item blue">projects</a>
-      <hr />
-    </nav>
-
     <!-- headshot -->
     <div id="headshot" v-bind:class="{ fadein: showHeadFade }">
       <img v-if="showHeadshot" src="media/leonkuhne.png" alt="Portrait" />
@@ -52,7 +44,7 @@
       </div>
     </div>
     <h3 v-if="showLinks" id="resume" class="links" v-bind:class="{ fadein: showFade }">
-      <a href="media/resume.pdf">Resume</a>
+      <a href="media/LeonK-Resume.pdf">Resume</a>
     </h3>
   </div>
 </body>
