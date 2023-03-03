@@ -25,18 +25,18 @@ document.addEventListener('DOMContentLoaded', ()=>{
         localStorage.setItem("leon-recent", (new Date))
 
         // type out my name
-        setTimeout(() => this.typeout(". "), 900)
+        setTimeout(() => this.typeout(". "), 400)
         setTimeout(() => {
           this.typeout("I'm Leon Kühne")
           setTimeout(() => {
             this.showHeadshot = true
             this.showHeadFade = true
-          }, 800)
+          }, 400)
           setTimeout(() => {
             this.showLinks = true
             this.showFade = true
-          }, 1200)
-        }, 1900)
+          }, 600)
+        }, 800)
       }
     },
     methods: {
