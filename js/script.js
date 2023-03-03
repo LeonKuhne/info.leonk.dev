@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
       showLinks: false,
       showFade: false,
       showHeadshot: false,
-      showHeadFade: false
+      showHeadFade: false,
+      showSkillIdx: 0,
     },
     created() {
       // get last visited timestamp
@@ -23,6 +24,15 @@ document.addEventListener('DOMContentLoaded', ()=>{
       } else {
         // remember the user
         localStorage.setItem("leon-recent", (new Date))
+        
+        // slide in skills
+        const numSkills = 3
+        const addSkill = () => {
+          if (this.showSkillIdx >= numSkills) return
+          this.showSkillIdx += 1
+          setTimeout(addSkill, 400)
+        }
+        addSkill()
 
         // type out my name
         setTimeout(() => this.typeout(". "), 400)

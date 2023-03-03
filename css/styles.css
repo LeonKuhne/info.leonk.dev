@@ -180,7 +180,7 @@ header {
 }
 
 /* use vertical align on mobile */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   #top {
     text-align: center;
     flex-direction: column;
@@ -215,20 +215,43 @@ header {
   #resume {
     margin-top: -3.25rem !important;
   }
+
+  /* make profile pic smaller */
+  #headshot {
+    margin-top: 1rem;
+    max-width: 35vw;
+    max-height: 35vw;
+  }
 }
 
-.hidden {
-  transform: translateY(-150%);
+/* left class and not slideLeft class */
+.left {
+  transform: translateX(100vw);
+}
+
+.slideDown {
+  transform: translateY(-100vh);
   animation: slideIn;
   animation-duration: 1.5s;
   animation-fill-mode: forwards;
+}
 
+.slideLeft {
+  transform: translateX(100vw);
+  animation: slideLeft;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
 }
 
 /* slide in content above screen */
 @keyframes slideIn {
-  from { transform: translateY(-150%); }
+  from { transform: translateY(-100vh) }
   to { transform: translateY(0); }
+}
+
+@keyframes slideLeft {
+  from { transform: translateX(100vw); }
+  to { transform: translateX(0); } 
 }
 
 #resume {

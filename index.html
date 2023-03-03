@@ -11,14 +11,14 @@
 </head>
 <body>
   <div id="app">
-    <div id="top" v-bind:class="{ hidden: !showHeadshot }">
-      <div id="headshot">
+    <div id="top">
+      <div id="headshot" v-bind:class="{ slideDown: !showHeadshot }">
         <img src="media/leonkuhne.png" alt="Portrait" />
       </div>
       <div id="skills">
-        <div>DevOps/Cloud Engineer</div>
-        <div>FullStack Developer</div>
-        <div>Solution Architect</div>
+        <div v-bind:class="{ slideLeft: (showSkillIdx > 0), left: !showLinks }">DevOps/Cloud Engineer</div>
+        <div v-bind:class="{ slideLeft: (showSkillIdx > 1), left: !showLinks }">FullStack Developer</div>
+        <div v-bind:class="{ slideLeft: (showSkillIdx > 2), left: !showLinks }">Solution Architect</div>
       </div>
     </div>
     <header><em>Hi</em>{{ title }}</header>
