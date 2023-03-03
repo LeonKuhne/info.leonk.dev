@@ -11,8 +11,15 @@
 </head>
 <body>
   <div id="app">
-    <div id="headshot" v-bind:class="{ fadein: showHeadFade }">
-      <img v-if="showHeadshot" src="media/leonkuhne.png" alt="Portrait" />
+    <div id="top" v-bind:class="{ hidden: !showHeadshot }">
+      <div id="headshot">
+        <img src="media/leonkuhne.png" alt="Portrait" />
+      </div>
+      <div id="skills">
+        <div>DevOps/Cloud Engineer</div>
+        <div>FullStack Developer</div>
+        <div>Solution Architect</div>
+      </div>
     </div>
     <header><em>Hi</em>{{ title }}</header>
     <nav>
@@ -40,8 +47,9 @@
       </div>
     </nav>
     <h3 v-if="showLinks" class="nav-links" v-bind:class="{ fadein: showFade }">
-      <a href="media/LeonK-Resume.pdf">Resume</a>
+      <a id="resume" href="media/LeonK-Resume.pdf">Resume</a>
     </h3>
+    <h3 v-if="!showLinks"></h3>
   </div>
 </body>
 </html>

@@ -1,11 +1,16 @@
-:root {
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Ubuntu&display=swap');
 
+:root {
+  --bg: #fafaf5;
+  --fg: black;
+  --accent: #F76902;
 }
 
 html {
-  color: black;
-  background-color: #fafaf5;
+  color: var(--fg);
+  background-color: var(--bg);
   height: 100%;
+  font-family: 'Open Sans', sans-serif;
 }
 
 body {
@@ -129,9 +134,11 @@ h3.nav-links a:hover {
 
 header {
   padding: 1vw;
-  font-size: 3em;
+  font-size: 2.25em;
   max-width: max-content;
   margin: auto;
+  font-weight: 100;
+  cursor: default;
 }
 
 @keyframes showNav {
@@ -144,4 +151,87 @@ header {
   to { filter: invert(100%); }
 }
 
+#top {
+  display: flex;
+  flex-direction: row;
+  cursor: default;
+  max-width: 850px;
+  margin: auto;
+  margin-bottom: 2rem;
+}
 
+#skills {
+  min-height: 100%;
+  font-size: 2rem;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  line-height: 50px;
+}
+
+#skills * {
+  flex: 1;
+}
+
+#skills *::before {
+  content: ">";
+  margin-right: 2rem;
+  color: var(--accent);
+}
+
+/* use vertical align on mobile */
+@media screen and (max-width: 700px) {
+  #top {
+    text-align: center;
+    flex-direction: column;
+    margin: auto;
+    max-width: fit-content;
+  }
+  #skills {
+    font-size: 1.5rem;
+    line-height: 2rem; 
+    font-weight: 700;
+  }
+  #skills *::before {
+    content: "";
+    margin: 0;
+  }
+
+  header {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .nav-links{ 
+    width: 70%;
+  }
+
+  /* make icons slightly smaller */
+  .link a img {
+    max-width: 12vw;
+    max-height: 12vw;
+  }
+
+  #resume {
+    margin-top: -3.25rem !important;
+  }
+}
+
+.hidden {
+  transform: translateY(-150%);
+  animation: slideIn;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+
+}
+
+/* slide in content above screen */
+@keyframes slideIn {
+  from { transform: translateY(-150%); }
+  to { transform: translateY(0); }
+}
+
+#resume {
+  font-size: 1.5rem;
+  margin-top: -1rem;
+}
