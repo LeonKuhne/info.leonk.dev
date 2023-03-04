@@ -11,14 +11,28 @@
 </head>
 <body>
   <div id="app">
+    <!-- show me -->
     <div id="top">
       <div id="headshot" v-bind:class="{ slideDown: !showHeadshot }">
         <img src="media/leonkuhne.png" alt="Portrait" />
       </div>
       <div id="skills">
-        <div v-bind:class="{ slideLeft: (showSkillIdx > 0), left: !showLinks }">DevOps/Cloud Engineer</div>
-        <div v-bind:class="{ slideLeft: (showSkillIdx > 1), left: !showLinks }">FullStack Developer</div>
-        <div v-bind:class="{ slideLeft: (showSkillIdx > 2), left: !showLinks }">Solution Architect</div>
+        <!-- show projects -->
+        <div id="project-container" v-on:click="showProjects = !showProjects">
+          <div id="project-menu" v-bind:class="{ slideLeft: (showSkillIdx > 0), left: !showLinks }">☰</div>
+          <div id="projects" v-if="showProjects">
+            <a href="https://csv.leonk.dev">csz</a>
+            <a href="https://f.leonk.dev">f</a>
+            <a href="https://nodel.leonk.dev">nodel</a>
+            <a href="https://notes.leonk.dev">notes</a>
+            <a href="https://store.leonk.dev">store</a>
+            <a href="https://stub.leonk.dev">stub</a>
+            <a href="https://waves.leonk.dev">waves</a>
+          </div>
+        </div>
+        <div class="skill" v-bind:class="{ slideLeft: (showSkillIdx > 1), left: !showLinks }">DevOps/Cloud Engineer</div>
+        <div class="skill" v-bind:class="{ slideLeft: (showSkillIdx > 2), left: !showLinks }">FullStack Developer</div>
+        <div class="skill" v-bind:class="{ slideLeft: (showSkillIdx > 3), left: !showLinks }">Solution Architect</div>
       </div>
     </div>
     <header><em>Hi</em>{{ title }}</header>

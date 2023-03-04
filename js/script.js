@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
       showHeadshot: false,
       showHeadFade: false,
       showSkillIdx: 0,
+      showProjects: false,
     },
     created() {
       // get last visited timestamp
@@ -26,7 +27,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         localStorage.setItem("leon-recent", (new Date))
         
         // slide in skills
-        const numSkills = 3
+        const numSkills = 4
         const addSkill = () => {
           if (this.showSkillIdx >= numSkills) return
           this.showSkillIdx += 1
