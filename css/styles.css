@@ -218,8 +218,8 @@ header {
   /* make profile pic smaller */
   #headshot {
     margin-top: 1rem;
-    max-width: 35vw;
-    max-height: 35vw;
+    max-width: 50vw;
+    max-height: 50vw;
   }
 
   #projects {
