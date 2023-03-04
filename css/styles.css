@@ -299,6 +299,8 @@ header {
   font-size: 2rem;
   margin-left: -0.25rem;
   color: var(--accent);
+  /* disable select */
+  user-select: none;
 }
 
 #projects {
