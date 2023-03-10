@@ -239,7 +239,7 @@ header {
 
   @keyframes showDownFull {
     from { height: 0rem; }
-    to { height: 14rem; }
+    to { height: 16rem; }
   }
 
   #project-container {
