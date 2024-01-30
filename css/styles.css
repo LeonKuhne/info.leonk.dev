@@ -223,8 +223,8 @@ header {
   }
 
   #projects {
-    width: 5rem;
-    margin-left: -2.25rem;
+    width: 6.25rem;
+    right: -3rem;
     margin-top: 0.75rem;
     display: flex;
     flex-direction: column;
@@ -239,7 +239,7 @@ header {
 
   @keyframes showDownFull {
     from { height: 0rem; }
-    to { height: 16rem; }
+    to { height: 22rem; }
   }
 
   #project-container {
