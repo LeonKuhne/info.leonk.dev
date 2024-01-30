@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
           setTimeout(() => {
             this.showHeadshot = true
             this.showHeadFade = true
-          }, 400)
+          }, 1500)
           setTimeout(() => {
             this.showLinks = true
             this.showFade = true
